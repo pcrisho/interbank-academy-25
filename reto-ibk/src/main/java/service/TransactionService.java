@@ -63,6 +63,7 @@ public class TransactionService {
      * Método para contar la cantidad total de transacciones por tipo.
      * @return Arreglo con [créditos, débitos]
      */
+    
     public int[] contarTransaccionesTipo() {
         // Variables que guardarán el conteo de transacciones por tipo
         int credito = 0;
