@@ -10,19 +10,18 @@ Este proyecto Java permite leer un archivo CSV con transacciones bancarias, cont
 reto-ibk/
 ├── src/
 │   └── main/
-│       ├── java/
-│       │   ├── com/
-│       │   │   └── mycompany/
-│       │   │          ├── Main.java
-│       │   ├── model/
-│       │   │   └── Transaction.java
-│       │   ├── reader/
-│       │   │   └── CSVReader.java
-│       │   └─── service/
-│       │       └── TransactionService.java
-│       └── resources/
-│           └── data.csv
+│       └── java/
+│           ├── com/
+│           │   └── mycompany/
+│           │          ├── Main.java
+│           ├── model/
+│           │   └── Transaction.java
+│           ├── reader/
+│           │   └── CSVReader.java
+│           └─── service/
+│               └── TransactionService.java
 ├── README.md
+├── data.csv
 └── pom.xml
 ```
 
