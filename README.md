@@ -54,8 +54,11 @@ id,tipo,monto
 Salida esperada en consola:
 
 ```
-Créditos: 2
-Débitos: 1
+Reporte de Transacciones
+---------------------------------------------
+Balance Final: 600
+Transacción de Mayor Monto: ID 3 - 300.00
+Conteo de Transacciones: Crédito: 2 Débito: 1
 ```
 
 ---
