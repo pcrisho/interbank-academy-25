@@ -1,30 +1,34 @@
 package model;
 
+/**
+ * Clase para representar una transacción bancaria con id, tipo y monto.
+ */
+
 public class Transaction {
 
     private int id;
-    private String type;
-    private double amount;
+    private String tipo;
+    private double monto;
 
     /**
      * Constructor para crear una nueva transacción.
      * @param id Identificador único de la transacción.
-     * @param type Tipo de transacción: "Crédito" o "Débito".
-     * @param amount Monto de la transacción, debe ser positivo.
+     * @param tipo Tipo de transacción: "Crédito" o "Débito".
+     * @param monto Monto de la transacción, debe ser positivo.
      */
 
-    public Transaction(int id, String type, double amount) {
+    public Transaction(int id, String tipo, double amount) {
         // Restricción en caso el tipo de transacción sea inválido
-        if (!type.equalsIgnoreCase("Crédito") && !type.equalsIgnoreCase("Débito")) {
-            throw new IllegalArgumentException("Tipo de transacción inválido: " + type + "!");
+        if (!tipo.equalsIgnoreCase("Crédito") && !tipo.equalsIgnoreCase("Débito")) {
+            throw new IllegalArgumentException("Tipo de transacción inválido: " + tipo + "!");
         }
         // Restricción en caso el monto sea inválido
         if (amount < 0) {
             throw new IllegalArgumentException("El monto no puede ser negativo");
         }
         this.id = id;
-        this.type = type;
-        this.amount = amount;
+        this.tipo = tipo;
+        this.monto = amount;
     }
 
      // Métodos getters
@@ -32,11 +36,11 @@ public class Transaction {
         return id;
     }
 
-    public String getType() {
-        return type;
+    public String getTipo() {
+        return tipo;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getMonto() {
+        return monto;
     }
 }
