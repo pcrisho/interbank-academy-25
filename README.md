@@ -1,66 +1,105 @@
-# Reto Técnico: Procesamiento de Transacciones Bancarias (CLI)
+# 🏦 Reto IBK: Procesador de Transacciones en Java
 
-## Objetivo:
-
-Desarrolla una aplicación de línea de comandos (CLI) que procese un archivo CSV con transacciones bancarias y genere un reporte que incluya:
-
-- **Balance Final:**  
-  Suma de los montos de las transacciones de tipo "Crédito" menos la suma de los montos de las transacciones de tipo "Débito".
-
-- **Transacción de Mayor Monto:**  
-  Identificar el ID y el monto de la transacción con el valor más alto.
-
-- **Conteo de Transacciones:**  
-  Número total de transacciones para cada tipo ("Crédito" y "Débito").
+Este proyecto Java permite leer un archivo CSV con transacciones bancarias, contar cuántas son de tipo **Crédito** y **Débito**, y generar un pequeño reporte por consola.
 
 ---
 
-## Instrucciones
+## 📁 Estructura del proyecto
 
-1. **Repositorio Base:**  
-   Clona o haz un fork del repositorio base disponible en:  
-   `https://github.com/codeableorg/interbank-academy-25`
+```
+reto-ibk/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── mycompany/
+│       │           ├── Main.java
+│       │           ├── model/
+│       │           │   └── Transaction.java
+│       │           ├── reader/
+│       │           │   └── CSVReader.java
+│       │           └── service/
+│       │               └── TransactionService.java
+│       └── resources/
+│           └── data.csv
+├── README.md
+└── pom.xml
+```
 
-2. **Entrada de Datos:**  
-   La aplicación deberá leer un archivo CSV. Ejemplo de contenido:
+---
 
-   ```
-   id,tipo,monto
-   1,Crédito,100.00
-   2,Débito,50.00
-   3,Crédito,200.00
-   4,Débito,75.00
-   5,Crédito,150.00
-   ```
+## 🧠 ¿Qué hace el programa?
 
-3. **Salida del Programa:**  
-   La aplicación debe mostrar el reporte final en la terminal.  
-   Ejemplo de salida:
+1. Lee el archivo `data.csv` desde `src/main/resources/`.
+2. Procesa las transacciones con los campos:
+   - `id`: identificador numérico
+   - `tipo`: `"Crédito"` o `"Débito"`
+   - `monto`: cantidad en formato decimal
+3. Cuenta cuántas transacciones hay de cada tipo.
+4. Muestra los resultados por consola.
 
-   ```
-   Reporte de Transacciones
-   ---------------------------------------------
-   Balance Final: 325.00
-   Transacción de Mayor Monto: ID 3 - 200.00
-   Conteo de Transacciones: Crédito: 3 Débito: 2
-   ```
+---
 
-4. **Lenguaje de Programación:**  
-   Utiliza el lenguaje de tu preferencia. Opciones recomendadas:
+## 💻 Ejemplo de uso
 
-   - Python
-   - Java
-   - C#
-   - JavaScript (Node.js)
+Archivo `data.csv`:
 
-5. **README del Proyecto:**  
-   Incluye un archivo `README.md` con la siguiente estructura:
+```
+id,tipo,monto
+1,Crédito,500.00
+2,Débito,200.00
+3,Crédito,300.00
+```
 
-   - **Introducción:** Breve descripción del reto y su propósito.
-   - **Instrucciones de Ejecución:** Cómo instalar dependencias y ejecutar la aplicación.
-   - **Enfoque y Solución:** Lógica implementada y decisiones de diseño.
-   - **Estructura del Proyecto:** Archivos y carpetas principales.
+Salida esperada en consola:
 
-6. **Documentación y Calidad del Código:**
-   - Código bien documentado y fácil de leer.
-   - Comentarios explicando pasos clave y lógica del programa.
+```
+Créditos: 2
+Débitos: 1
+```
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- Java 11+
+- Maven
+- VS Code (u otro IDE)
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/reto-ibk.git
+cd reto-ibk
+```
+
+2. Compila el proyecto:
+
+```bash
+mvn clean compile
+```
+
+3. Ejecuta el proyecto:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.mycompany.Main"
+```
+
+> Asegúrate de que el archivo `data.csv` esté en `src/main/resources/`.
+
+---
+
+## 📌 Notas adicionales
+
+- El código omite líneas inválidas del CSV y muestra errores por consola.
+- Se puede adaptar fácilmente para procesar otros tipos de datos financieros.
+
+---
+
+## ✍️ Autor
+
+Proyecto desarrollado como parte del programa **INTERBANK ACADEMY 2025**.
