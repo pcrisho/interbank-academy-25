@@ -11,15 +11,15 @@ reto-ibk/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── com/
-│       │       └── mycompany/
-│       │           ├── Main.java
-│       │           ├── model/
-│       │           │   └── Transaction.java
-│       │           ├── reader/
-│       │           │   └── CSVReader.java
-│       │           └── service/
-│       │               └── TransactionService.java
+│       │   ├── com/
+│       │   │   └── mycompany/
+│       │   │          ├── Main.java
+│       │   ├── model/
+│       │   │   └── Transaction.java
+│       │   ├── reader/
+│       │   │   └── CSVReader.java
+│       │   └─── service/
+│       │       └── TransactionService.java
 │       └── resources/
 │           └── data.csv
 ├── README.md
@@ -73,8 +73,9 @@ Débitos: 1
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/reto-ibk.git
-cd reto-ibk
+git clone https://github.com/pcrisho/interbank-academy-25.git
+
+cd interbank-academy-25
 ```
 
 2. Compila el proyecto:
@@ -89,13 +90,20 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass="com.mycompany.Main"
 ```
 
-> Asegúrate de que el archivo `data.csv` esté en `src/main/resources/`.
+> Asegúrate de que el archivo `data.csv` exista.
 
 ---
 
 ## 📌 Notas adicionales
 
 - El código omite líneas inválidas del CSV y muestra errores por consola.
+- Se puede adaptar fácilmente para procesar otros tipos de datos financieros.
+
+---
+
+##  Puntos por mejorar
+
+- Pueden aplicarse validaciones más estrictas
 - Se puede adaptar fácilmente para procesar otros tipos de datos financieros.
 
 ---
